@@ -1,0 +1,23 @@
+{
+  "name": "movies-collection-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaimShvartz/Movies-Collection-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChaimShvartz/Movies-Collection-manager/issues"
+  },
+  "homepage": "https://github.com/ChaimShvartz/Movies-Collection-manager#readme",
+  "dependencies": {
+    "analiza-sync": "^1.0.1"
+  }
+}
