@@ -2,7 +2,7 @@ import fs from "fs/promises";
 
 const path = "data/movies.json";
 
-async function loadMoviesAsync() {
+export async function loadMoviesAsync() {
     
     try {
         return await fs.readFile(path, "utf8").then(JSON.parse);
@@ -11,7 +11,7 @@ async function loadMoviesAsync() {
     }
 }
 
-async function dumpMoviesAsync(data) {
+export async function dumpMoviesAsync(data) {
     try {
         return await fs.writeFile(path, JSON.stringify(data, null, 2));
     } catch (err) {
