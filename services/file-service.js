@@ -1,25 +1,20 @@
-import fs from "fs";
+import fs from "fs/promises";
 
-export function readFileAsPromise(path, cb) {
-    fs.readFile(path, "utf8", (err, data) => {
-        try {
-            if (err) throw new Error(err);
-            cb(JSON.parse(data));
-        } catch (err) {
-            console.error(err.message);
-        }
-    });
+const path = "data/movies.json";
+
+async function loadMoviesAsync() {
+    
+    try {
+        return await fs.readFile(path, "utf8").then(JSON.parse);
+    } catch (err) {
+        console.error(err.message);
+    }
 }
 
-export function writeFileAsPromise(path, data) {
-    fs.writeFile(path, JSON.stringify(data), "utf8", (err) => {
-        try {
-            if (err) throw new Error(err);
-            console.log("File writed successfully");
-        } catch (err) {
-            console.error(err.message);
-        }
-    });
+async function dumpMoviesAsync(data) {
+    try {
+        return await fs.writeFile(path, JSON.stringify(data, null, 2));
+    } catch (err) {
+        console.error(err.message);
+    }
 }
-
-writeFileAsPromise("./data/movies.json", {msg: "hiiiii"});
