@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/ChaimShvartz/Movies-Collection-manager#readme",
   "dependencies": {
-    "analiza-sync": "^1.0.1"
-  }, 
+    "analiza-sync": "^1.0.1",
+    "readline-sync": "^1.4.10"
+  },
   "type": "module"
 }
